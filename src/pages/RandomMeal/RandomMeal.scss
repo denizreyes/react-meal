@@ -1,0 +1,51 @@
+@import '../../assets/css/variables';
+
+.random{
+  width: 100%;
+  padding: 20px 0;
+
+  &_grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &_controls{
+      margin-right: 10px;
+      width: 40%;
+      img{
+        object-fit: cover;
+        width: 100%;
+        border-radius: 4px;
+      }
+      button{
+        width: 100%;
+        margin-top: 10px;
+        color: $white;
+        border: none;
+        padding: 10px;
+        text-align: center;
+        background: lighten($color: #000000, $amount: 15);
+        border-radius: 4px;
+        font-size: 16px;
+        transition: background 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover{
+          background: lighten($color: #000000, $amount: 30);
+        }
+      }
+    }
+   
+    &_instructions{
+      width: 60%;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 10px;
+      border-radius: 4px;
+      h4{
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}

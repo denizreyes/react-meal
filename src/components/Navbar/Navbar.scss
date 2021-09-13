@@ -1,0 +1,58 @@
+@import '../../assets/css/variables';
+
+header{
+  width: 100%;
+  background: $black;
+  color: $white;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.navbar{
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &_title{
+    a{
+      color: $white;
+      text-decoration: none;
+    }
+    h1{
+      font-size: 30px;
+      span{
+        transition: color 0.3s ease-in-out;
+        color: $light-orange;
+      }      
+      &:hover > span {
+        color: $orange;
+      }
+    }
+  }
+  &_links{
+    ul{
+      display: flex;
+      list-style: none;
+    }
+    li{
+      margin: 0 10px;
+    }
+    a{
+      color: $white;
+      text-decoration: none;
+      padding: 10px;
+      background: lighten($color: #000000, $amount: 15);
+      border-radius: 4px;
+      font-size: 16px;
+      transition: background 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover{
+        background: lighten($color: #000000, $amount: 30);
+      }
+    }
+  }
+}

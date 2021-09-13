@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+import { AppContext } from './context/context';
+import "@fontsource/roboto";
+import './assets/css/base.scss';
 
-function App() {
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home';
+import Categories from './pages/Categories/Categories';
+import RandomMeal from './pages/RandomMeal/RandomMeal';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AppContext>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/categories" component={Categories} />
+          <Route exact path="/random" component={RandomMeal} />
+          <Route exact path="/" component={Home} />
+          <Route path="*" component={Home} />
+        </Switch>
+        <Footer />
+      </Router>
+    </AppContext>
+  )
 }
 
-export default App;
+export default App

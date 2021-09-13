@@ -1,0 +1,20 @@
+@import '../../assets/css/variables';
+
+footer{
+  width: 100%;
+  background: $black;
+  color: $white;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+
+  p{
+    font-size: 18px;
+    span{
+      color: $light-orange;
+    }
+  }
+}

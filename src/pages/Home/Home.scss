@@ -1,0 +1,45 @@
+@import '../../assets/css/variables';
+
+.home{
+  display: flex;
+  flex-direction: column;
+  &_search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px 0;
+    input{
+      padding: 10px;
+      outline: none;
+      border: none;
+      width: 300px;
+      font-size: 18px;
+      border-radius: 4px 0 0 4px;
+    }
+    button{
+      padding: 10px;
+      font-size: 18px;
+      background: $light-orange;
+      color: $white;
+      outline: none;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+      &:hover{
+        background: $orange;
+      }
+    }
+  }
+  &_meals{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    h2{
+      color: $white;
+      font-size: 24px;
+    }
+  }
+}
